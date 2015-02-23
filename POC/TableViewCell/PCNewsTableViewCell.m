@@ -8,6 +8,8 @@
 
 #import "PCNewsTableViewCell.h"
 
+#define kFontString @"Times New Roman"
+
 @implementation PCNewsTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -19,13 +21,13 @@
         self.titleLabel.textColor = [UIColor colorWithRed:39.0/255.0f green:64.0/255.0f blue:129.0/255.0f alpha:1.0f];
         self.titleLabel.numberOfLines =0;
         [self.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
-        self.titleLabel.font = [UIFont fontWithName:@"Times New Roman" size:20.0f];
+        self.titleLabel.font = [UIFont fontWithName:kFontString size:20.0f];
         [self addSubview:self.titleLabel];
         
         self.descriptionLabel = [[[UILabel alloc] init] autorelease];
         self.descriptionLabel.textColor = [UIColor blackColor];
         self.descriptionLabel.numberOfLines=0;
-        self.descriptionLabel.font = [UIFont fontWithName:@"Times New Roman" size:12.0f];
+        self.descriptionLabel.font = [UIFont fontWithName:kFontString size:12.0f];
         [self.descriptionLabel sizeToFit];
         [self addSubview:self.descriptionLabel];
         
